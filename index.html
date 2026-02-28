@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 | PWEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lampu1">
+            <h2>Rangkaian 1</h2>
+            <div class="gambar-grup">
+                <img id="gambar1" src="off.jpg" alt="">
+                <img id="gambar2" src="off.jpg" alt="">
+                <img id="gambar3" src="off.jpg" alt="">
+            </div>
+            <div class="button-grup">
+                <button id="button1" onclick="button1()">Turn On</button>
+                <button id="button2" onclick="button2()">Turn On</button>
+            </div>
+        </div>
+        <div class="lampu2">
+            <h2>Rangkaian 2</h2>
+            <div class="gambar-grup">
+                <img id="a" src="off.jpg" alt="">
+                <img id="b" src="off.jpg" alt="">
+                <img id="c" src="off.jpg" alt="">
+                <img id="d" src="off.jpg" alt="">
+            </div>
+            <div class="button-grup">
+                <button id="button1" onclick="buttonsatu()">OneByOne On</button>
+                <button id="button2" onclick="buttondua()">All On</button>
+                <button id="button3" onclick="buttontiga()">Couple On</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+let lampu1Hidup = false;
+let lampu2Hidup = false;
+let lampu3Hidup = false;
+let urutan = 1;
+
+function button1() {
+
+    if (urutan == 1) {
+        if (lampu1Hidup) {
+            document.getElementById("gambar1").src = "off.jpg";
+            lampu1Hidup = false;
+        } else {
+            document.getElementById("gambar1").src = "on.jpg";
+            lampu1Hidup = true;
+        }
+        urutan = 2;
+
+    } else if (urutan == 2) {
+        if (lampu2Hidup) {
+            document.getElementById("gambar2").src = "off.jpg";
+            lampu2Hidup = false;
+        } else {
+            document.getElementById("gambar2").src = "on.jpg";
+            lampu2Hidup = true;
+        }
+        urutan = 3;
+
+    } else {
+        if (lampu3Hidup) {
+            document.getElementById("gambar3").src = "off.jpg";
+            lampu3Hidup = false;
+        } else {
+            document.getElementById("gambar3").src = "on.jpg";
+            lampu3Hidup = true;
+        }
+        urutan = 1;
+    }
+}
+
+function button2() {
+
+    if (lampu1Hidup) {
+        document.getElementById("gambar1").src = "off.jpg";
+        lampu1Hidup = false;
+    } else {
+        document.getElementById("gambar1").src = "on.jpg";
+        lampu1Hidup = true;
+    }
+
+    if (lampu2Hidup) {
+        document.getElementById("gambar2").src = "off.jpg";
+        lampu2Hidup = false;
+    } else {
+        document.getElementById("gambar2").src = "on.jpg";
+        lampu2Hidup = true;
+    }
+
+    if (lampu3Hidup) {
+        document.getElementById("gambar3").src = "off.jpg";
+        lampu3Hidup = false;
+    } else {
+        document.getElementById("gambar3").src = "on.jpg";
+        lampu3Hidup = true;
+    }
+}
+
+let aHidup = false;
+let bHidup = false;
+let cHidup = false;
+let dHidup = false;
+let urut2 = 1;
+let urutPasangan = 1;
+
+function buttonsatu() {
+
+    if (urut2 == 1) {
+        if (aHidup) {
+            document.getElementById("a").src = "off.jpg";
+            aHidup = false;
+        } else {
+            document.getElementById("a").src = "on.jpg";
+            aHidup = true;
+        }
+        urut2 = 2;
+
+    } else if (urut2 == 2) {
+        if (bHidup) {
+            document.getElementById("b").src = "off.jpg";
+            bHidup = false;
+        } else {
+            document.getElementById("b").src = "on.jpg";
+            bHidup = true;
+        }
+        urut2 = 3;
+
+    } else if (urut2 == 3) {
+        if (cHidup) {
+            document.getElementById("c").src = "off.jpg";
+            cHidup = false;
+        } else {
+            document.getElementById("c").src = "on.jpg";
+            cHidup = true;
+        }
+        urut2 = 4;
+
+    } else {
+        if (dHidup) {
+            document.getElementById("d").src = "off.jpg";
+            dHidup = false;
+        } else {
+            document.getElementById("d").src = "on.jpg";
+            dHidup = true;
+        }
+        urut2 = 1;
+    }
+}
+
+function buttondua() {
+
+    if (aHidup) { document.getElementById("a").src = "off.jpg"; aHidup = false; }
+    else { document.getElementById("a").src = "on.jpg"; aHidup = true; }
+
+    if (bHidup) { document.getElementById("b").src = "off.jpg"; bHidup = false; }
+    else { document.getElementById("b").src = "on.jpg"; bHidup = true; }
+
+    if (cHidup) { document.getElementById("c").src = "off.jpg"; cHidup = false; }
+    else { document.getElementById("c").src = "on.jpg"; cHidup = true; }
+
+    if (dHidup) { document.getElementById("d").src = "off.jpg"; dHidup = false; }
+    else { document.getElementById("d").src = "on.jpg"; dHidup = true; }
+}
+
+function buttontiga() {
+
+    if (urutPasangan == 1) {
+
+        if (aHidup) {
+            document.getElementById("a").src = "off.jpg";
+            document.getElementById("b").src = "off.jpg";
+            aHidup = false;
+            bHidup = false;
+        } else {
+            document.getElementById("a").src = "on.jpg";
+            document.getElementById("b").src = "on.jpg";
+            aHidup = true;
+            bHidup = true;
+        }
+
+        urutPasangan = 2;
+
+    } else {
+
+        if (cHidup) {
+            document.getElementById("c").src = "off.jpg";
+            document.getElementById("d").src = "off.jpg";
+            cHidup = false;
+            dHidup = false;
+        } else {
+            document.getElementById("c").src = "on.jpg";
+            document.getElementById("d").src = "on.jpg";
+            cHidup = true;
+            dHidup = true;
+        }
+
+        urutPasangan = 1;
+    }
+}
+</script>
+</body>
+</html>
