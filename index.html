@@ -173,33 +173,43 @@ function buttontiga() {
 
     if (urutPasangan == 1) {
 
-        if (aHidup) {
-            document.getElementById("a").src = "off.jpg";
-            document.getElementById("b").src = "off.jpg";
-            aHidup = false;
-            bHidup = false;
-        } else {
-            document.getElementById("a").src = "on.jpg";
-            document.getElementById("b").src = "on.jpg";
-            aHidup = true;
-            bHidup = true;
-        }
+        document.getElementById("a").src = "on.jpg";
+        document.getElementById("b").src = "on.jpg";
+        document.getElementById("c").src = "off.jpg";
+        document.getElementById("d").src = "off.jpg";
+
+        aHidup = true;
+        bHidup = true;
+        cHidup = false;
+        dHidup = false;
 
         urutPasangan = 2;
 
+    } else if (urutPasangan == 2) {
+
+        document.getElementById("a").src = "off.jpg";
+        document.getElementById("b").src = "off.jpg";
+        document.getElementById("c").src = "on.jpg";
+        document.getElementById("d").src = "on.jpg";
+
+        aHidup = false;
+        bHidup = false;
+        cHidup = true;
+        dHidup = true;
+
+        urutPasangan = 3;
+
     } else {
 
-        if (cHidup) {
-            document.getElementById("c").src = "off.jpg";
-            document.getElementById("d").src = "off.jpg";
-            cHidup = false;
-            dHidup = false;
-        } else {
-            document.getElementById("c").src = "on.jpg";
-            document.getElementById("d").src = "on.jpg";
-            cHidup = true;
-            dHidup = true;
-        }
+        document.getElementById("a").src = "off.jpg";
+        document.getElementById("b").src = "off.jpg";
+        document.getElementById("c").src = "off.jpg";
+        document.getElementById("d").src = "off.jpg";
+
+        aHidup = false;
+        bHidup = false;
+        cHidup = false;
+        dHidup = false;
 
         urutPasangan = 1;
     }

@@ -9,7 +9,8 @@ Button kedua berfungsi untuk mengubah kondisi semua lampu sekaligus, jika lampu 
 Lalu di rangkaian kedua ada empat lampu dan 3 button.
 Button pertama mengaktifkan lampu satu persatu atau bergantian dengan variabel urut2 sebagai pengatur urutan.
 Button kedua berfungsi untuk menyalakan atau mematikan seluruh lampu secara bersamaan dengan cara yang sama seperti pada rangkaian pertama.
-Button ketiga mengaktifkan lampu secara berpasangan, yaitu lampu a dan b saat klik pertama dan lampu c dan d pada klik berikutnya, menggunakan variabel urutPasangan yang menentukan pasangan mana yang aktif.
+Button ketiga mengaktifkan lampu secara berpasangan dan bergantian, yaitu lampu a dan b akan menyala saat diklik pertama dan lampu c dan d pada klik berikutnya, lalu saat klik ketiga semua lampu akan mati, menggunakan variabel urutPasangan yang menentukan pasangan mana yang aktif.
+Status masing masing lampu disimpan dimasing masing variabel untuk rangkaian satu (lampu1Hidup, lampu2Hidup, ampu3Hidup), untuk rangkian kedua (aHidup, bHidup, cHidup, dHidup).
 Semua proses ini dilakukan dengan menggunakan percangan if-else (untuk mengecek kondisi) pada masing masing lampu.
 Dan button memiliki event handling melalui atribut onclick.
 Saya menambahkan sedikit styling juga pada proyek ini.
